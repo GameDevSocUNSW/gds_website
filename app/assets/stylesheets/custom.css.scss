@@ -3,6 +3,13 @@
 // Author: Omair Ali 
 // (With significant amounts stolen from Michael Hartl's Rails Tutorial)
 
+
+//Variables
+
+$footerColor: #171717;
+$backgroundColor: #398037;
+$mainWellColor:#A8ABA7;
+$fontColor: #fff;
 //==============
 // UNIVERSAL
 //==============
@@ -12,7 +19,7 @@ html {
 
 
    body {
-      background-color:#000;
+      background-color: $footerColor;
    }
 
    section {
@@ -20,7 +27,9 @@ html {
    }
 
    #mainsection {
-      background-color:#398037;
+      background-image:url('bg.png');
+      background-attachment:fixed;
+      background-color:$backgroundColor;
    }
    textarea {
       resize: vertical;
@@ -39,7 +48,7 @@ html {
    }
 
    .well{
-      background-color:#A8ABA7;
+      background-color:$mainWellColor;
    }
    //==============
    // TYPOGRAPHY
@@ -139,7 +148,7 @@ html {
 
    footer small {
       float: left;
-      color: #fff;
+      color: $fontColor;
    }
 
    footer ul {
@@ -154,6 +163,11 @@ html {
 
    footer .well {
       border: 0px;
-      background-color: #000;
+      background-color: $footerColor;
+   }
+
+   footer .contact{
+      float: right;
+      color: $fontColor;
    }
 }
