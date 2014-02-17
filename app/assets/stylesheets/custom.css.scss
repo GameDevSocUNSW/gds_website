@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "font-awesome";
 // Author: Omair Ali 
 // (With significant amounts stolen from Michael Hartl's Rails Tutorial)
 
@@ -21,7 +21,7 @@ section {
 }
 
 textarea {
-  // resize: vertical;
+   resize: vertical;
 }
 
 .center {
