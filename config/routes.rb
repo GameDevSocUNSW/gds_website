@@ -1,10 +1,11 @@
 Gds::Application.routes.draw do
-   root 'static_pages#home'
+   match '/home', to: 'static_pages#home', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
    match '/about', to: 'static_pages#about', via: 'get'
    match '/constitution', to: 'static_pages#constitution', via: 'get'
    match '/contact', to: 'static_pages#contact', via: 'get'
+   root 'static_pages#home'
 
    # The priority is based upon order of creation: first created -> highest priority.
    # See how all your routes lay out with "rake routes".

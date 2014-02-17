@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <title><%= get_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+   <head>
+      <title><%= get_title(yield(:title)) %></title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+   </head>
+   <%= render 'layouts/header' %>
+   <body>
+      <div class="panel panel-default">
+         <div class="panel-body">
+            Wopee
+            <%=  %>
+         </div>
+      </div>
+   </body>
 </html>
