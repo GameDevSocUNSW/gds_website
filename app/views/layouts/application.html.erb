@@ -18,6 +18,14 @@
             </div>
          <% else %>
             <div class="container maincontainer">
+               <% if yield(:title).to_s == "Home" %>
+
+                  <div class="hero-unit", id="homeunit">
+                     <h1>GDS</h1>
+                     <p>Game Development Society UNSW</p>
+
+                  </div>
+               <% end %>
                <div class="well">
                   <%= yield %>
                </div>
