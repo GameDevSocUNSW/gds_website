@@ -9,12 +9,21 @@
    <body>
       <%= render 'layouts/header' %>
       <div id="mainsection">
-         <div class="container mainwell">
-            <div class="well">
-               <%= yield %>
+
+         <% if yield(:title).to_s == "Signup" %>
+            <div class="container-fluid maincontainer">
+               <div class="row offset5">
+                  <%= yield %>
+               </div>
             </div>
-         </div>
+         <% else %>
+            <div class="container maincontainer">
+               <div class="well">
+                  <%= yield %>
+               </div>
+            </div>
+         <% end %>
       </div>
-         <%= render 'layouts/footer' %>
+      <%= render 'layouts/footer' %>
    </body>
 </html>
