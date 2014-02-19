@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 @import "font-awesome";
 // Author: Omair Ali 
 // (With significant amounts stolen from Michael Hartl's Rails Tutorial)
@@ -51,7 +52,8 @@ html {
    }
 
    .center {
-      text-align: center;
+      float:none;  
+      margin: 0 auto;
    }
 
    .center h1 {
@@ -120,7 +122,7 @@ html {
 
    #signup{
       font-weight:bold;
-      color: #DB2E4B;
+      color: #CF6D6D;
    }
 
    #signup:hover{
@@ -137,8 +139,6 @@ html {
    }
 
    .side-well {
-      float:right;
-      margin-right: -150px;
       background-color: $mainWellColor;
       position: fixed;
    }
@@ -147,39 +147,39 @@ html {
    //==============
 
    footer {
-   }
 
-   footer a {
-      color: #555;
-   }
 
-   footer a:hover {
-      color: #ff00ff;
-   }
+      a {
+         color: #577DFA;
+         &:hover {
+            color: #FAD457;
+         }
+      }
 
-   footer small {
-      float: left;
-      color: $fontColor;
-   }
+      small {
+         float: left;
+         color: $fontColor;
+      }
 
-   footer ul {
-      float: right;
-      list-style: none;
-   }
+      ul {
+         float: right;
+         list-style: none;
+      }
 
-   footer ul li {
-      float: left;
-      margin-left: 10px;
-   }
+      ul li {
+         float: left;
+         margin-left: 10px;
+      }
 
-   footer .well {
-      border: 0px;
-      background-color: $footerColor;
-   }
+      .well {
+         border: 0px;
+         background-color: $footerColor;
+      }
 
-   footer .contact{
-      float: right;
-      text-align: right;
-      color: $fontColor;
+      .contact{
+         float: right;
+         text-align: right;
+         color: $fontColor;
+      }
    }
 }

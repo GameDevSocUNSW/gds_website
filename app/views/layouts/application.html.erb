@@ -2,35 +2,25 @@
 <html>
    <head>
       <title><%= get_title(yield(:title)) %></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <%= csrf_meta_tags %>
    </head>
    <body>
       <%= render 'layouts/header' %>
-      <div id="mainsection">
-
-         <% if yield(:title).to_s == "Signup" %>
-            <div class="container-fluid maincontainer">
-               <div class="row offset5">
-                  <%= yield %>
-               </div>
-            </div>
-         <% else %>
-            <div class="container maincontainer">
-               <% if yield(:title).to_s == "Home" %>
-
+      <div class="container-fluid", id="mainsection">
+         <div class="container maincontainer">
+            <% if yield(:title).to_s == "Home" %>
+               <div class="span12 center">
                   <div class="hero-unit", id="homeunit">
                      <h1>GDS</h1>
                      <p>Game Development Society UNSW</p>
-
                   </div>
-               <% end %>
-               <div class="well">
-                  <%= yield %>
                </div>
-            </div>
-         <% end %>
+            <% end %>
+            <%= yield %>
+         </div>
       </div>
       <%= render 'layouts/footer' %>
    </body>
