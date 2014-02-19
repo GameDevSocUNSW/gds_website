@@ -8,8 +8,9 @@
       <%= csrf_meta_tags %>
    </head>
    <body>
-      <%= render 'layouts/header' %>
-      <div class="container-fluid", id="mainsection">
+      <div class="container-fluid", id="master-section", style="background-color:#fff;">
+
+         <%= render 'layouts/header' %>
          <div class="container maincontainer">
             <% if yield(:title).to_s == "Home" %>
                <div class="span12 center">
@@ -22,6 +23,8 @@
             <%= yield %>
          </div>
       </div>
+
       <%= render 'layouts/footer' %>
+
    </body>
 </html>

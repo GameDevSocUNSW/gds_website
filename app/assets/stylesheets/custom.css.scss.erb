@@ -11,7 +11,7 @@ $footerColor: #171717;
 $backgroundColor: #7CC6F7;
 $mainWellColor:rgba(216,226,232,0.8);
 $sideWellColor:rgba(230,0,30,0.8);
-$instructionWellColor:#6FE868;
+$instructionWellColor:rgba(160,232,84,0.8);
 $fontColor: #fff;
 
 //==============
@@ -43,10 +43,10 @@ html {
       }
    }
 
-   #mainsection {
+   #master-section {
       background-image:url(<%= asset_path 'bg.png' %>);
       background-attachment:fixed;
-      background-color:$backgroundColor;
+      // background-color:$backgroundColor;
    }
    textarea {
       resize: vertical;
@@ -138,8 +138,8 @@ html {
    }
 
    .maincontainer{
-      padding-top: 80px;
-      padding-bottom: 50px;
+      padding-top: 60px;
+      padding-bottom: 100px;
    }
 
    .well{
@@ -149,6 +149,10 @@ html {
    .side-well {
       background-color: $mainWellColor;
       position: fixed;
+   }
+
+   .navbar{
+      max-height:20px;
    }
    //==============
    // FOOTER
