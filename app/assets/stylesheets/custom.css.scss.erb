@@ -20,178 +20,178 @@ $fontColor: #fff;
 
 html {
    overflow-y: scroll;
+}
 
+body {
+   background-color: $footerColor;
+}
 
-   body {
-      background-color: $footerColor;
-   }
+section {
+   overflow: auto;
+}
 
-   section {
-      overflow: auto;
-   }
-
-   #homeunit{
-      background-image:url(<%= asset_path 'bg.jpg' %>);
-      h1 {
-         color:#fff;
-         text-align: left;
-      }
-
-      p {
-         color:#fff;
-         font-size: 1em;
-      }
-   }
-
-   #master-section {
-      background-image:url(<%= asset_path 'bg.png' %>);
-      background-attachment:fixed;
-      // background-color:$backgroundColor;
-   }
-   textarea {
-      resize: vertical;
-   }
-
-   .center {
-      float:none;  
-      margin: 0 auto;
-   }
-
-   .center h1 {
-      margin-bottom: 10px;
-   }
-
-   .panel {
-      // background-color:#FFFFFF;
-   }
-
-   .well{
-      background-color:$mainWellColor;
-   }
-
-   .instruction-well{
-      background-color:$instructionWellColor;
-      li {
-         font-size:1.2em;
-      }
-   }
-   //==============
-   // TYPOGRAPHY
-   //==============
-
-   h1, h2, h3, h4, h5, h6 {
-      line-height: 1;
-   }
-
+#homeunit{
+   background-image:url(<%= asset_path 'bg.jpg' %>);
    h1 {
-      font-size: 3em;
-      letter-spacing: -2px;
-      margin-bottom: 30px;
-      text-align: center;
-   }
-
-   h2 {
-      font-size: 2em;
-      letter-spacing: -1px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-weight: normal;
+      color:#fff;
+      text-align: left;
    }
 
    p {
-      font-size: 1.1em;
-      line-height: 1.7em;
-   }
-
-   //==============
-   // HEADER
-   //==============
-
-   #logo {
-      float: left;
-      margin-right: 10px;
-      font-size: 1.7em;
-      color: #fff;
-      //text-transform: uppercase;
-      letter-spacing: -1px;
-      padding-top: 9px;
-      font-weight: bold;
-      line-height: 1;
-   }
-
-   #logo:hover {
-      color: #7CC6F7;
-      text-decoration: none;
-   }
-
-   #navop {
-      font-weight:bold;
-   }
-
-   #signup{
-      font-weight:bold;
-      color: #CF6D6D;
-   }
-
-   #signup:hover{
-      color: #ff0000;
-   }
-
-   .maincontainer{
-      padding-top: 60px;
-      padding-bottom: 100px;
-   }
-
-   .well{
-      border: 0px;
-   }
-
-   .side-well {
-      background-color: $mainWellColor;
-      position: fixed;
-   }
-
-   .navbar{
-      max-height:20px;
-   }
-   //==============
-   // FOOTER
-   //==============
-
-   footer {
-
-
-      a {
-         color: #577DFA;
-         &:hover {
-            color: #FAD457;
-         }
-      }
-
-      small {
-         float: left;
-         color: $fontColor;
-      }
-
-      ul {
-         float: right;
-         list-style: none;
-      }
-
-      ul li {
-         float: left;
-         margin-left: 10px;
-      }
-
-      .well {
-         border: 0px;
-         background-color: $footerColor;
-      }
-
-      .contact{
-         float: right;
-         text-align: right;
-         color: $fontColor;
-      }
+      color:#fff;
+      font-size: 1em;
    }
 }
+
+#master-section {
+   background-image:url(<%= asset_path 'bg.png' %>);
+  // background-attachment:fixed;
+   // background-color:$backgroundColor;
+}
+textarea {
+   resize: vertical;
+}
+
+.center {
+   float:none;  
+   margin: 0 auto;
+}
+
+.center h1 {
+   margin-bottom: 10px;
+}
+
+.panel {
+   // background-color:#FFFFFF;
+}
+
+.well{
+   background-color:$mainWellColor;
+}
+
+.instruction-well{
+   background-color:$instructionWellColor;
+   li {
+      font-size:1.2em;
+   }
+}
+//==============
+// TYPOGRAPHY
+//==============
+
+h1, h2, h3, h4, h5, h6 {
+   line-height: 1;
+}
+
+h1 {
+   font-size: 3em;
+   letter-spacing: -2px;
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+h2 {
+   font-size: 2em;
+   letter-spacing: -1px;
+   margin-bottom: 30px;
+   text-align: center;
+   font-weight: normal;
+}
+
+p {
+   font-size: 1.1em;
+   line-height: 1.7em;
+}
+
+//==============
+// HEADER
+//==============
+
+#logo {
+   float: left;
+   margin-right: 10px;
+   font-size: 1.7em;
+   color: #fff;
+   //text-transform: uppercase;
+   letter-spacing: -1px;
+   padding-top: 9px;
+   font-weight: bold;
+   line-height: 1;
+}
+
+#logo:hover {
+   color: #7CC6F7;
+   text-decoration: none;
+}
+
+#navop {
+   font-weight:bold;
+}
+
+#signup{
+   font-weight:bold;
+   color: #CF6D6D;
+}
+
+#signup:hover{
+   color: #ff0000;
+}
+
+.maincontainer{
+   padding-top: 80px;
+   padding-bottom: 100px;
+}
+
+.well{
+   border: 0px;
+}
+
+.side-well {
+   background-color: $mainWellColor;
+   position: fixed;
+}
+
+.navbar{
+   max-height:20px;
+}
+//==============
+// FOOTER
+//==============
+
+footer {
+
+
+   a {
+      color: #577DFA;
+      &:hover {
+         color: #FAD457;
+      }
+   }
+
+   small {
+      float: left;
+      color: $fontColor;
+   }
+
+   ul {
+      float: right;
+      list-style: none;
+   }
+
+   ul li {
+      float: left;
+      margin-left: 10px;
+   }
+
+   .well {
+      border: 0px;
+      background-color: $footerColor;
+   }
+
+   .contact{
+      float: right;
+      text-align: right;
+      color: $fontColor;
+   }
+}
+
