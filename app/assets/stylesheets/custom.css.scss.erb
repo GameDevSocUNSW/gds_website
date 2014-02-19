@@ -6,7 +6,7 @@
 //Variables
 
 $footerColor: #171717;
-$backgroundColor: #7CC6F7;
+$backgroundColor: #7DAB71;
 $mainWellColor:rgba(216,226,232,0.8);
 $sideWellColor:rgba(230,0,30,0.8);
 $instructionWellColor:rgba(160,232,84,0.8);
@@ -25,14 +25,23 @@ $footerHeight: 70px;
    }
 }
 
+@media (max-width: 979px) {
+   .navbar {
+      margin-left: -20px;
+      margin-right: -20px;
+   }
+}
+
+
 html {
    overflow-y: scroll;
 }
 
 body {
 
-   background-color: $footerColor;
+   background-color: $backgroundColor;
    background-image:url(<%= asset_path 'bg.png' %>);
+   background-repeat: repeat-x;
 }
 
 section {
