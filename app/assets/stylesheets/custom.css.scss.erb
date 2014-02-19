@@ -2,8 +2,6 @@
 @import "bootstrap-responsive";
 @import "font-awesome";
 // Author: Omair Ali 
-// (With significant amounts stolen from Michael Hartl's Rails Tutorial)
-
 
 //Variables
 
@@ -14,9 +12,18 @@ $sideWellColor:rgba(230,0,30,0.8);
 $instructionWellColor:rgba(160,232,84,0.8);
 $fontColor: #fff;
 $footerHeight: 70px;
+
 //==============
 // UNIVERSAL
 //==============
+
+// Set footer to stretch when on mobile.
+@media (max-width: 767px) {
+   footer {
+      margin-left: -20px;
+      margin-right: -20px;
+   }
+}
 
 html {
    overflow-y: scroll;
@@ -131,11 +138,7 @@ p {
 }
 
 .maincontainer{
-   height:100%;
-   position:relative;
    padding-top: 80px;
-   padding-bottom: 100px;
-   margin-bottom: -100px;
 }
 
 .well{
@@ -155,13 +158,9 @@ p {
 //==============
 
 .footer {
-   width:100%;
    height:$footerHeight;
-   bottom:0;
-   position:absolute;
-   z-index:1;
    background-color:$footerColor;
-    a {
+   a {
       color: #577DFA;
       &:hover {
          color: #FAD457;

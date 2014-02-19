@@ -6,25 +6,42 @@
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <%= csrf_meta_tags %>
-   </head>
-   <body>
-     <div class="container-fluid", id="master-section">
 
-         <%= render 'layouts/header' %>
-         <div class="container maincontainer">
-            <% if yield(:title).to_s == "Home" %>
-               <div class="span12 center">
-                  <div class="hero-unit", id="homeunit">
-                     <h1>GDS</h1>
-                     <p>Game Development Society UNSW</p>
-                  </div>
+      <script type="text/javascript">
+         <!--
+         function placeFooter() {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight) {
+               $('#footer').css('margin-top',2+ (docHeight - footerTop)+ 'px');
+            }
+         }
+            $(document).ready(function() {placeFooter()});
+            // -->
+            window.addEventListener('resize', placeFooter);
+            </script>
+         </head>
+         <body>
+            <div class="container-fluid", id="master-section">
+
+               <%= render 'layouts/header' %>
+               <div class="container maincontainer">
+                  <% if yield(:title).to_s == "Home" %>
+                     <div class="span12 center">
+                        <div class="hero-unit", id="homeunit">
+                           <h1>GDS</h1>
+                           <p>Game Development Society UNSW</p>
+                        </div>
+                     </div>
+                  <% end %>
+                  <%= yield %>
                </div>
-            <% end %>
-            <%= yield %>
-         </div>
-      </div>
+            </div>
 
-      <%= render 'layouts/footer' %>
+            <%= render 'layouts/footer' %>
 
-   </body>
-</html>
+         </body>
+      </html>
