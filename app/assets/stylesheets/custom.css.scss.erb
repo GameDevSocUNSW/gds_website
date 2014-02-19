@@ -13,7 +13,7 @@ $mainWellColor:rgba(216,226,232,0.8);
 $sideWellColor:rgba(230,0,30,0.8);
 $instructionWellColor:rgba(160,232,84,0.8);
 $fontColor: #fff;
-
+$footerHeight: 70px;
 //==============
 // UNIVERSAL
 //==============
@@ -23,7 +23,9 @@ html {
 }
 
 body {
+
    background-color: $footerColor;
+   background-image:url(<%= asset_path 'bg.png' %>);
 }
 
 section {
@@ -43,11 +45,6 @@ section {
    }
 }
 
-#master-section {
-   background-image:url(<%= asset_path 'bg.png' %>);
-  // background-attachment:fixed;
-   // background-color:$backgroundColor;
-}
 textarea {
    resize: vertical;
 }
@@ -59,10 +56,6 @@ textarea {
 
 .center h1 {
    margin-bottom: 10px;
-}
-
-.panel {
-   // background-color:#FFFFFF;
 }
 
 .well{
@@ -138,8 +131,11 @@ p {
 }
 
 .maincontainer{
+   height:100%;
+   position:relative;
    padding-top: 80px;
    padding-bottom: 100px;
+   margin-bottom: -100px;
 }
 
 .well{
@@ -158,10 +154,14 @@ p {
 // FOOTER
 //==============
 
-footer {
-
-
-   a {
+.footer {
+   width:100%;
+   height:$footerHeight;
+   bottom:0;
+   position:absolute;
+   z-index:1;
+   background-color:$footerColor;
+    a {
       color: #577DFA;
       &:hover {
          color: #FAD457;
