@@ -1,8 +1,22 @@
 <% provide(:title, 'Signup') %>
+<div class="row">
+   <% #Well with Facebook link for low resolutions %>
+   <div class="span4 visible-phone">
+      <div class="well">
+         <div align="center">
+            <p>
+            <h3>While you're here...</h3>
+            <a href="https://www.facebook.com/groups/185233411589007/" target="_blank">
+               <button class="btn-large btn-facebook"><i class="fa fa-facebook"></i> | Join us on Facebook!</button>   </p>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
 
 <div class="row">
-   <% #Well with Facebook link %>
-   <div class="span4", style="float:right;">
+   <% #Well with Facebook link For high resolutions %>
+   <div class="span4 hidden-phone", style="float:right;">
       <div class="well side-well">
          <div align="center">
             <p>
@@ -18,7 +32,7 @@
    <% #Well with the Signup sheet %>
    <div class="span8">
       <div class="well">
-         <h1>How to Sign up</h1>
+         <h1>How to Sign Up</h1>
       </div>
    </div>
 </div>
