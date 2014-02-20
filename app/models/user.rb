@@ -1,30 +1,32 @@
 class User < ActiveRecord::Base
 
-   VALID_NAME_REGEX = /\A[a-z]+\z/i
+   VALID_NAME_REGEX = /\A[a-zA-z]+\z/i
 
    # Capitalize names and position before saving to database
    before_save { 
-      self.position = position.capitalize!;
-      self.first_name = first_name.capitalize!;
-      self.last_name = last_name.capitalize!;
+      self.position.capitalize!;
+      self.first_name.capitalize!;
+      self.last_name.capitalize!;
    }
 
    # Validation 
    validates(:first_name, { 
       presence: true, 
       format: { with: VALID_NAME_REGEX }, 
-      length: { maximum:50 },
-      uniqueness: true
+      length: { maximum:50 }
    })
    validates(:last_name, { 
       presence: true, 
       format: { with: VALID_NAME_REGEX },
-      length: { maximum:50 },
+      length: { maximum:50 }
+   })
+   validates(:position, {
+      presence: true,
       uniqueness: { case_sensitive: false }
    })
-   validates(:position, { presence: true })
 
    validates(:password, {
+      presence: true,
       length: { minimum: 8 }
    })
 
