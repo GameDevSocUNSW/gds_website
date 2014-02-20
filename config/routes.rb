@@ -1,9 +1,10 @@
 Gds::Application.routes.draw do
-  get "users/new"
+  #get "users/new"
    match '/home', to: 'static_pages#home', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
    match '/about', to: 'static_pages#about', via: 'get'
+   match '/exec', to: 'static_pages#signin', via: 'get'
    #match '/constitution', to: 'static_pages#constitution', via: 'get'
    #match '/contact', to: 'static_pages#contact', via: 'get'
    root 'static_pages#home'
