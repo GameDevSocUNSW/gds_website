@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'font-awesome-rails'
+gem 'bcrypt-ruby', '3.1.2'
 #gem "flat-ui-rails"
 
 group :development, :test do
