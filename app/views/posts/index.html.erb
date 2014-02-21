@@ -15,9 +15,9 @@
             <br>
             <br>
             Posted on: <%= post.created_at.in_time_zone(Time.zone.name).to_date %>
-            <%# if post.created_at != post.updated_at %>
-               | Updated on <%#= post.updated_at %>
-            <%# end %>
+            <% if post.created_at != post.updated_at %>
+               | Updated on <%= post.updated_at %>
+            <% end %>
             | <i>by <%#= get_author_name(post) %></i> 
             <%# if signed_in? %>
                <br>
