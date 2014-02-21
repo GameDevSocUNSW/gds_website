@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
    end
    def create
       @error=''
-      user = User.find_by(position: params[:session][:position].capitalize)
+      user = User.find_by(position: params[:session][:position])
       if (user && user.authenticate(params[:session][:password]))
          sign_in user
          redirect_to root_path
