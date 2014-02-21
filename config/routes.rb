@@ -7,6 +7,8 @@ Gds::Application.routes.draw do
    match '/about', to: 'static_pages#about', via: 'get'
    match '/exec', to: 'sessions#create', via: 'post'
    match '/exec', to: 'sessions#new', via: 'get'
+   match '/account', to: 'users#edit', via: 'get'
+   match '/account', to: 'users#update', via: 'patch'
    match '/signout', to: 'sessions#destroy', via: 'delete'
    #match '/constitution', to: 'static_pages#constitution', via: 'get'
    #match '/contact', to: 'static_pages#contact', via: 'get'
