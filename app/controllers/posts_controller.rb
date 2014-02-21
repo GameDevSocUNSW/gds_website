@@ -18,8 +18,30 @@ class PostsController < ApplicationController
          render 'new'
       end
    end
+
+   def edit 
+      if (!signed_in?)
+         redirect_to root_path
+      end
+      @post = Post.find(params[:id])
+   end
+
+   def update
+      @post = Post.find(params[:id])
+      if (@post.update_attributes(post_params))
+         redirect_to root_path
+      else
+         render 'edit'
+      end
+   end
+
    def index
       @posts = Post.all
+   end
+
+   def destroy
+      Post.find(params[:id]).destroy
+      redirect_to root_path
    end
 
    private

@@ -1,7 +1,6 @@
 Gds::Application.routes.draw do
-  get "posts/new"
-  #get "users/new"
-   resources :sessions, only: [:new, :create, :destroy]
+
+   resources :posts 
    match '/home', to: 'posts#index', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
