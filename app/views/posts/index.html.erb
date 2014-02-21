@@ -18,7 +18,7 @@
             <%# if post.created_at != post.updated_at %>
                | Updated on <%= post.updated_at %>
             <%# end %>
-            | <i>by <%= get_author_name(post) %></i> 
+            | <i>by <%#= get_author_name(post) %></i> 
             <%# if signed_in? %>
                <br>
                <%#= link_to "Edit", edit_post_path(post) %> 
