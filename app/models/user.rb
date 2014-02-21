@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
 
    # Capitalize names and position before saving to database
    before_save { 
-      self.position.capitalize!;
       self.first_name.capitalize!;
       self.last_name.capitalize!;
    }
