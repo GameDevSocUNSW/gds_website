@@ -1,10 +1,13 @@
 Gds::Application.routes.draw do
   #get "users/new"
+   resources :sessions, only: [:new, :create, :destroy]
    match '/home', to: 'static_pages#home', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
    match '/about', to: 'static_pages#about', via: 'get'
-   match '/exec', to: 'static_pages#signin', via: 'get'
+   match '/exec', to: 'sessions#create', via: 'post'
+   match '/exec', to: 'sessions#new', via: 'get'
+   match '/signout', to: 'sessions#destroy', via: 'delete'
    #match '/constitution', to: 'static_pages#constitution', via: 'get'
    #match '/contact', to: 'static_pages#contact', via: 'get'
    root 'static_pages#home'

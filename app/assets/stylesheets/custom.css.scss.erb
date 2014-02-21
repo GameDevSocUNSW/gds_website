@@ -11,6 +11,7 @@ $mainWellColor:rgba(216,226,232,0.8);
 $sideWellColor:rgba(230,0,30,0.8);
 $instructionWellColor:rgba(160,232,84,0.8);
 $fontColor: #fff;
+$accountColor: #E7EB79;
 $footerHeight: 70px;
 
 //==============
@@ -141,13 +142,34 @@ p {
    font-weight:bold;
 }
 
+#account{
+   font-weight:bold;
+   color: $accountColor;
+   &:hover{
+      color:#F8FF24;
+      .caret{
+      border-top-color: #F8FF24 !important;
+      border-bottom-color: #F8FF24 !important; 
+
+      }
+   }
+   .caret {
+      border-top-color: $accountColor !important;
+      border-bottom-color: $accountColor !important; 
+   }
+}
+
+#greeting{
+   padding: 10px 15px;
+   font-weight:bold;
+   color: #fff;
+}
 #signup{
    font-weight:bold;
    color: #CF6D6D;
-}
-
-#signup:hover{
-   color: #ff0000;
+   &:hover{
+      color: #ff0000;
+   }
 }
 
 .maincontainer{
