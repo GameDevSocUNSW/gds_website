@@ -8,6 +8,7 @@ gem 'font-awesome-rails'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'redcarpet', '1.17.2'
 #gem "flat-ui-rails"
 
 group :development, :test do

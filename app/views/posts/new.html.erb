@@ -1,0 +1,15 @@
+<div class="well">
+   <h1>Create Post</h1>
+   <%= form_for(@post, url: 'newpost') do |f| %>
+      <%= render '/shared/error_messages' %>
+      <%= f.label "Title" %>
+      <%= f.text_field :title, class: "span7" %>
+      <label>Content Type</label>
+      <%= f.select :content_type, [['General','general'],['Social','social'],['workshop','workshop']], {}, { :class => 'form-control'} %>
+
+      <%= f.label "Content" %>
+      <%= f.text_area :content, class: "span10" %>
+      <br><br>
+      <%= f.submit "Submit", class: "btn-inverse btn-large btn-primary" %>
+   <% end %>
+</div>

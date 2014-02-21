@@ -6,14 +6,16 @@
 
 <div class="container">
    <div class="well">
-      <h1>ども、ども、早くしてください!</h1>
-      <%= form_for(:session, url: 'exec') do |f|%>
-         <%= f.label "Yes" %>
-         <%= f.text_field :position %>
-         <%= f.label "Ma'am" %>
-         <%= f.password_field :password %>
-         <br>
-         <%= f.submit "молоко", class: "btn-inverse btn-large btn-primary" %>
-      <%  end %>
+      <div id="login">
+         <h1>ども、ども、早くしてください!</h1>
+         <%= form_for(:session, url: 'exec') do |f|%>
+            <%= f.label "Yes" %>
+            <%= f.text_field :position %>
+            <%= f.label "Ma'am" %>
+            <%= f.password_field :password %>
+            <br>
+            <%= f.submit "молоко", class: "btn-inverse btn-large btn-primary" %>
+         <%  end %>
+      </div>
    </div>
 </div>

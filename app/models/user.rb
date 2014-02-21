@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+   has_many :posts
    VALID_NAME_REGEX = /\A[a-zA-z]+\z/i
 
    # Capitalize names and position before saving to database

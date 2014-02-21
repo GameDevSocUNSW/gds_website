@@ -1,0 +1,28 @@
+<% provide(:title, 'Home') %>
+<div class="well">
+   <h1>Announcements</h1>
+   <% @posts.each do |post| %>
+      <div id="<%= post.content_type %>">
+         <div class="well">
+            <div id="edit_options">
+               [<%= post.content_type.to_s.capitalize %>]
+            </div>
+            <h3><%= post.title %></h3>
+
+            <p><%= markdown(post.content) %></p>
+            <br>
+            <br>
+            Posted on: <%= post.created_at %>
+            <% if post.created_at != post.updated_at %>
+               | Updated on <%= post.updated_at %>
+            <% end %>
+            | by <%= get_author_name(post) %>
+            <% if signed_in? %>
+               <div id="edit_options">
+                  Edit | Delete
+               </div>
+            <% end %>
+         </div>
+      </div>
+   <% end %>
+</div>

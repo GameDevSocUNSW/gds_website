@@ -10,6 +10,9 @@ $backgroundColor: #7DAB71;
 $mainWellColor:rgba(216,226,232,0.8);
 $sideWellColor:rgba(230,0,30,0.8);
 $instructionWellColor:rgba(160,232,84,0.8);
+$socialWellColor: rgba(191, 228, 179, 0.8);
+$workshopWellColor: rgba(228,210,179, 0.8);
+$generalWellColor: rgba(89,179,202,0.8);
 $fontColor: #fff;
 $accountColor: #E7EB79;
 $footerHeight: 70px;
@@ -39,7 +42,6 @@ html {
 }
 
 body {
-
    background-color: $backgroundColor;
    background-image:url(<%= asset_path 'bg.png' %>);
    background-repeat: repeat-x;
@@ -77,6 +79,19 @@ textarea {
 
 .well{
    background-color:$mainWellColor;
+}
+
+#general .well{
+   background-color:$generalWellColor;
+
+}
+
+#workshop .well{
+   background-color:$workshopWellColor;
+}
+
+#social .well{
+   background-color:$socialWellColor;
 }
 
 .instruction-well{
@@ -148,8 +163,8 @@ p {
    &:hover{
       color:#F8FF24;
       .caret{
-      border-top-color: #F8FF24 !important;
-      border-bottom-color: #F8FF24 !important; 
+         border-top-color: #F8FF24 !important;
+         border-bottom-color: #F8FF24 !important; 
 
       }
    }
@@ -170,6 +185,10 @@ p {
    &:hover{
       color: #ff0000;
    }
+}
+
+#edit_options{
+   text-align:right;
 }
 
 .maincontainer{
@@ -229,3 +248,27 @@ p {
    }
 }
 
+#login{
+   form, label, input {
+      text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+   }
+}
+
+textarea{
+   height:500px;
+   resize:none;
+}
+label{
+   font-size:1.3em;
+   font-weight:bold;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
+
+   border-color: rgba(0, 0, 0, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.6);
+   outline: 0 none;
+
+}

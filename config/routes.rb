@@ -1,7 +1,8 @@
 Gds::Application.routes.draw do
+  get "posts/new"
   #get "users/new"
    resources :sessions, only: [:new, :create, :destroy]
-   match '/home', to: 'static_pages#home', via: 'get'
+   match '/home', to: 'posts#index', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
    match '/about', to: 'static_pages#about', via: 'get'
@@ -10,9 +11,11 @@ Gds::Application.routes.draw do
    match '/account', to: 'users#edit', via: 'get'
    match '/account', to: 'users#update', via: 'patch'
    match '/signout', to: 'sessions#destroy', via: 'delete'
+   match '/newpost', to: 'posts#new', via: 'get'
+   match '/newpost', to: 'posts#create', via: 'post'
    #match '/constitution', to: 'static_pages#constitution', via: 'get'
    #match '/contact', to: 'static_pages#contact', via: 'get'
-   root 'static_pages#home'
+   root 'posts#index'
 
    # The priority is based upon order of creation: first created -> highest priority.
    # See how all your routes lay out with "rake routes".
