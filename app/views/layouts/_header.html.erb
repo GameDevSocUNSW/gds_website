@@ -2,6 +2,11 @@
    <header class="navbar navbar-fixed-top navbar-inverse" id="header">
    <div class="navbar-inner">
       <div class="container">
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </a>
          <%= link_to "GameDevSoc@UNSW", root_path, id: "logo" %>
          <ul class="nav pull-right">
             <% if signed_in? %>
@@ -18,11 +23,15 @@
                </ul>
                </li>
             <% end %>
-            <li><%= link_to "Home",    root_path , id: "navop" %></li>
-            <li><%= link_to "About",    about_path, id: "navop" %></li>
-            <li><%= link_to "Showcase", showcase_path, id: "navop" %></li>
-            <li><%= link_to "Toilet",    '#' , id: "navop"%></li>
-            <li><%= link_to "Sign Up",    signup_path, id: "signup", title: "You know you want to." %></li>
+            <div class="nav-collapse">
+               <div class="nav">
+                  <li><%= link_to "Home",    root_path , id: "navop" %></li>
+                  <li><%= link_to "About",    about_path, id: "navop" %></li>
+                  <li><%= link_to "Showcase", showcase_path, id: "navop" %></li>
+                  <li><%= link_to "Toilet",    '#' , id: "navop"%></li>
+                  <li><%= link_to "Sign Up",    signup_path, id: "signup", title: "You know you want to." %></li>
+               </div>
+            </div>
          </ul>
       </div>
    </div>
