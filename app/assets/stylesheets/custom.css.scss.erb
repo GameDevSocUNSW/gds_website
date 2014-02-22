@@ -13,11 +13,13 @@ $instructionWellColor:rgba(160,232,84,0.8);
 $socialWellColor: rgba(191, 228, 179, 0.8);
 $workshopWellColor: rgba(228,210,179, 0.8);
 $generalWellColor: rgba(89,179,202,0.8);
+$bufferColor: rgba(228,210,179, 0);
+
 $fontColor: #fff;
 $accountColor: #E7EB79;
 $footerHeight: 70px;
 $topPadding: 80px;
-
+$bufferPadding:50px;
 //==============
 // UNIVERSAL
 //==============
@@ -98,6 +100,11 @@ textarea {
 
 #social .well{
    background-color:$socialWellColor;
+}
+
+#buffer{
+   padding-top:$bufferPadding;
+   background-color: $bufferColor;
 }
 
 .instruction-well{
@@ -199,7 +206,6 @@ p {
 
 .maincontainer{
    padding-top: 100px;
-   padding-bottom: 10px;
 }
 
 .well{

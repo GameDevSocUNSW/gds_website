@@ -6,7 +6,7 @@
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <%= csrf_meta_tags %>
-<!--
+      <!--
       <script type="text/javascript">
          function placeFooter() {
 
@@ -18,10 +18,10 @@
                $('#footer').css('margin-top',2+ (docHeight - footerTop)+ 'px');
             }
          }
-            $(document).ready(function() {placeFooter()});
+$(document).ready(function() {placeFooter()});
 
-            window.addEventListener('resize', placeFooter);
-         </script> -->
+window.addEventListener('resize', placeFooter);
+</script> -->
          </head>
          <body>
             <div class="container-fluid", id="master-section">
@@ -38,9 +38,11 @@
                   <% end %>
                   <%= yield %>
                </div>
-            </div>
+               
+                  <div class="well", id="buffer"></div>
 
+            </div>
             <%= render 'layouts/footer' %>
-            <%= debug(params) if Rails.env.development? %>
+            <%#= debug(params) if Rails.env.development? %>
          </body>
       </html>
