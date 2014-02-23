@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title><%= get_title(yield(:title)) %></title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-      <link rel="shortcut icon" href="<%= asset_path 'logo.png'%>"/>
-      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-      <%= csrf_meta_tags %>
+<head>
+   <title><%= get_title(yield(:title)) %></title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <link rel="shortcut icon" href="<%= asset_path 'logo.png'%>"/>
+   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+   <%= csrf_meta_tags %>
       <!--
       <script type="text/javascript">
          function placeFooter() {
@@ -23,27 +23,29 @@ $(document).ready(function() {placeFooter()});
 
 window.addEventListener('resize', placeFooter);
 </script> -->
-         </head>
-         <body>
-            <div class="container-fluid", id="master-section">
+</head>
+<body>
+   <div class="container-fluid", id="master-section">
 
-               <%= render 'layouts/header' %>
-               <div class="container maincontainer">
-                  <% if yield(:title).to_s == "Home" %>
-                     <div class="span12 center">
-                        <div class="hero-unit", id="homeunit">
-                           <h1>GDS</h1>
-                           <p>Game Development Society UNSW</p>
-                        </div>
-                     </div>
-                  <% end %>
-                  <%= yield %>
-               </div>
-               
-                  <div class="container", id="buffer"></div>
-
+      <%= render 'layouts/header' %>
+      <div class="container maincontainer">
+         <% if yield(:title).to_s == "Home" %>
+         <div class="span12 center">
+            <div class="hero-unit", id="homeunit">
+            <div class="container-fluid">
+               <h1>GDS</h1>
+               <p>Game Development Society UNSW</p>
+</div>
             </div>
-            <%= render 'layouts/footer' %>
-            <%#= debug(params) if Rails.env.development? %>
-         </body>
-      </html>
+         </div>
+         <% end %>
+         <%= yield %>
+      </div>
+
+      <div class="container", id="buffer"></div>
+
+   </div>
+   <%= render 'layouts/footer' %>
+   <%#= debug(params) if Rails.env.development? %>
+</body>
+</html>
