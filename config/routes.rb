@@ -12,6 +12,7 @@ Gds::Application.routes.draw do
    match '/signout', to: 'sessions#destroy', via: 'delete'
    match '/newpost', to: 'posts#new', via: 'get'
    match '/newpost', to: 'posts#create', via: 'post'
+   match '/tutorials', to: 'static_pages#tutorials', via: 'get'
    #match '/constitution', to: 'static_pages#constitution', via: 'get'
    #match '/contact', to: 'static_pages#contact', via: 'get'
    root 'posts#index'
