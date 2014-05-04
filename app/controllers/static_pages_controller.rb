@@ -19,4 +19,7 @@ class StaticPagesController < ApplicationController
 
   def tutorials
   end
+
+  def sponsors
+  end
 end

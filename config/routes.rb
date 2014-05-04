@@ -3,6 +3,7 @@ Gds::Application.routes.draw do
    resources :posts 
    match '/home', to: 'posts#index', via: 'get'
    match '/signup', to: 'static_pages#signup', via: 'get'
+   match '/sponsors', to: 'static_pages#sponsors', via: 'get'
    match '/showcase', to: 'static_pages#showcase', via: 'get'
    match '/about', to: 'static_pages#about', via: 'get'
    match '/exec', to: 'sessions#create', via: 'post'
